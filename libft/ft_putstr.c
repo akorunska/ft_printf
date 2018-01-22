@@ -6,7 +6,7 @@
 /*   By: akorunsk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/27 19:21:06 by akorunsk          #+#    #+#             */
-/*   Updated: 2017/10/27 19:21:52 by akorunsk         ###   ########.fr       */
+/*   Updated: 2018/01/22 08:57:35 by akorunsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,14 @@
 
 void		ft_putstr(char const *s)
 {
-	ft_putstr_fd(s, 1);
+	int	i;
+
+	i = 0;
+	if (!s)
+		return ;
+	while (s[i] != '\0')
+	{
+		ft_putchar(s[i]);
+		i++;
+	}
 }

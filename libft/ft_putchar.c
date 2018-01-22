@@ -6,13 +6,13 @@
 /*   By: akorunsk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/27 19:16:26 by akorunsk          #+#    #+#             */
-/*   Updated: 2017/10/27 19:17:51 by akorunsk         ###   ########.fr       */
+/*   Updated: 2018/01/22 08:56:23 by akorunsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "unistd.h"
 
 void		ft_putchar(char c)
 {
-	ft_putchar_fd(c, 1);
+	write(1, &c, 1);
 }
