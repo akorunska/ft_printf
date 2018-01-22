@@ -47,8 +47,7 @@ void	parse_width(const char *str, t_param *p, va_list args)
 	}
 	while (i >= 1)
 	{
-		if (ft_isdigit(str[i]))
-			num = 1;
+        num = ft_isdigit(str[i]);
 		if (num && !ft_isdigit(str[i - 1]) && str[i - 1] != '.')
 		{
 			p->width_specified = 1;
