@@ -11,14 +11,13 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdlib.h>
 
-int		ft_putnstr(char *str, t_param *p)
+int		ft_putnstr(char *str, int to_output)
 {
 	int		i;
-	int		to_output;
 
 	i = 0;
-	to_output = (p->precision > 0) ? p->precision : -p->precision;
 	while (i < to_output && str[i])
 	{
 		ft_putchar(str[i]);
@@ -32,6 +31,8 @@ int		handle_string(va_list args, t_param *p)
 	char		*str;
 	int			len;
 
+	if (!ft_strcmp(p->len, "l"))
+		return (handle_wstring(args, p));
 	str = (char *)va_arg(args, void*);
 	if (!str)
 		str = "(null)";
@@ -42,7 +43,7 @@ int		handle_string(va_list args, t_param *p)
 	if (p->width_specified && !p->flag_minus && p->flag_zero)
 		ft_putnchar('0', p->width - len);
 	if (p->precision_specified)
-		ft_putnstr(str, p);
+		ft_putnstr(str, (p->precision > 0) ? p->precision : -p->precision);
 	else
 		ft_putstr(str);
 	if (p->width_specified && p->flag_minus)

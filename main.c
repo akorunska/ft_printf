@@ -13,15 +13,18 @@
 #include "include/ft_printf.h"
 #include <stdio.h>
 #include <limits.h>
+#include <locale.h>
 
 int		main(void)
 {
 	int rv2;
 	int rv1;
 
-	rv1 = printf("|%*.3s|", 4, "LYDI");
+	setlocale(LC_ALL, "");
+
+	rv1 = printf("%.4S", L"Á±≥Á±≥Á±≥Á±≥");
 	printf("\n");
-	rv2 = ft_printf("|%*.3s|", 4, "LYDI");
+	rv2 = ft_printf("%.4S", L"aaaa");
 	printf("\n");
 	printf("original return value is %i, yours is %i", rv1, rv2);
 	printf("\n");
