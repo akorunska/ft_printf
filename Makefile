@@ -16,7 +16,7 @@ SRC =	src/ft_printf.c src/specifier.c \
 		src/helpers/initialise.c src/helpers/putnumbrs.c \
 		src/helpers/count_digits.c src/helpers/parse.c \
 		src/helpers/checker.c src/helpers/output_str.c \
-		src/helpers/length_conv.c \
+		src/helpers/length_conv.c src/helpers/putwchar.c\
 		src/handlers/handle_flags.c src/handlers/handle_wstring.c \
 		src/handlers/handle_char.c src/handlers/handle_int.c \
 		src/handlers/handle_string.c src/handlers/handle_percent.c \

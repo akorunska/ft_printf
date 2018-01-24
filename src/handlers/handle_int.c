@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "stdio.h" //
 
 void		handle_zero_flag_d(long long int val, t_param *p, char zero)
 {

@@ -58,7 +58,8 @@ void			ft_putnbr_base(unsigned int n, int base, char seed)
 	ft_putchar(output);
 }
 
-void			ft_putnbr_long_base(unsigned long long int n, int base, char seed)
+void			ft_putnbr_long_base(unsigned long long int n, int base, \
+									char seed)
 {
 	char	output;
 

@@ -19,7 +19,7 @@ int		handle_hex_l(va_list args, t_param *p)
 
 	val = convert_unsigned(args, p);
 	len = (p->precision > count_digits_base(val, 16)) ? p->precision \
- 		: count_digits_base(val, 16);
+		: count_digits_base(val, 16);
 	if (p->precision_specified && !p->precision && !val)
 		len = 0;
 	len += count_additional_len_ox('x', p, val);
@@ -44,7 +44,7 @@ int		handle_hex_c(va_list args, t_param *p)
 
 	val = convert_unsigned(args, p);
 	len = (p->precision > count_digits_base(val, 16)) ? p->precision \
- 		: count_digits_base(val, 16);
+		: count_digits_base(val, 16);
 	if (p->precision_specified && !p->precision && !val)
 		len = 0;
 	len += count_additional_len_ox('X', p, val);

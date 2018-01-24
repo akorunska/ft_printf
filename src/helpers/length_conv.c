@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-long long int convert_signed(va_list args, t_param *p)
+long long int				convert_signed(va_list args, t_param *p)
 {
 	long long int val;
 
@@ -33,7 +33,7 @@ long long int convert_signed(va_list args, t_param *p)
 	return (val);
 }
 
-long long unsigned int convert_unsigned(va_list args, t_param *p)
+long long unsigned int		convert_unsigned(va_list args, t_param *p)
 {
 	long long unsigned int val;
 
@@ -52,15 +52,4 @@ long long unsigned int convert_unsigned(va_list args, t_param *p)
 	else
 		val = (unsigned int)va_arg(args, void*);
 	return (val);
-}
-
-int						get_wchar_len(unsigned char c)
-{
-	if (c >= 240)
-		return (4);
-	if (c >= 224)
-		return (3);
-	if (c >= 128)
-		return (2);
-	return (1);
 }

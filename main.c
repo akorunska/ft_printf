@@ -21,10 +21,9 @@ int		main(void)
 	int rv1;
 
 	setlocale(LC_ALL, "");
-
-	rv1 = printf("%.4S", L"Á±≥Á±≥Á±≥Á±≥");
+	rv1 = printf("{%05p}", 0);
 	printf("\n");
-	rv2 = ft_printf("%.4S", L"aaaa");
+	rv2 = ft_printf("{%05p}", 0);
 	printf("\n");
 	printf("original return value is %i, yours is %i", rv1, rv2);
 	printf("\n");

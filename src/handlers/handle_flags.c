@@ -11,10 +11,9 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "stdio.h"
 
 int		count_additional_len_ox(char type, t_param *p,
-								   unsigned long long int val)
+									unsigned long long int val)
 {
 	if (type == 'o' && p->flag_hash && \
 	(val || (!p->precision && p->precision_specified)))
@@ -62,10 +61,10 @@ void	handle_flags_d(char type, t_param *p, \
 		ft_putchar(' ');
 }
 
-void		handle_zero_flag_u(long long unsigned int val, \
+void	handle_zero_flag_u(long long unsigned int val, \
 			t_param *p, char type, int base)
 {
-	int 		i;
+	int			i;
 	int			digits;
 
 	i = 0;

@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "stdio.h" //
 
 void	parse_precision(const char *str, t_param *p, va_list args)
 {

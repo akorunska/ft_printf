@@ -50,7 +50,6 @@ void					parse_length(const char *str, t_param *p);
 
 long long int			convert_signed(va_list args, t_param *p);
 long long unsigned int	convert_unsigned(va_list args, t_param *p);
-int						get_wchar_len(unsigned char c);
 
 int						count_additional_len_ox(char type, t_param *p, \
 						unsigned long long int val);
@@ -65,8 +64,9 @@ void					handle_zero_flag_u(unsigned long long int val, \
 
 int						handle_int(va_list args, t_param *p);
 int						handle_char(va_list args, t_param *p);
+int						handle_wchar(va_list args, t_param *p);
 int						handle_string(va_list args, t_param *p);
-int		                handle_wstring(va_list args, t_param *p);
+int						handle_wstring(va_list args, t_param *p);
 int						handle_percent(va_list args, t_param *p);
 int						handle_unsigned(va_list args, t_param *p);
 int						handle_octal(va_list args, t_param *p);
@@ -75,6 +75,9 @@ int						handle_hex_c(va_list args, t_param *p);
 int						handle_ptr(va_list args, t_param *p);
 int						handle_char_err(char c, t_param *p);
 int						ft_putnstr(char *str, int to_output);
+
+int						get_wchar_len(int c);
+void					ft_putwchar(int c);
 
 void					ft_putnchar(char c, int n);
 void					ft_putnbr_ll(long long int n, t_param *p);
