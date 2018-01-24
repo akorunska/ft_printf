@@ -21,9 +21,9 @@ int		main(void)
 	int rv1;
 
 	setlocale(LC_ALL, "");
-	rv1 = printf("{%05p}", 0);
+	rv1 = printf("%.10S|", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B");
 	printf("\n");
-	rv2 = ft_printf("{%05p}", 0);
+	rv2 = ft_printf("%.10S|", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B");
 	printf("\n");
 	printf("original return value is %i, yours is %i", rv1, rv2);
 	printf("\n");

@@ -72,10 +72,11 @@ int		handle_ptr(va_list args, t_param *p)
 	len = (p->precision > count_digits_base(val, 16)) ? p->precision \
 		: count_digits_base(val, 16);
 	len += count_additional_len_ox('p', p, val);
-	if (p->width_specified && !p->flag_minus)
+	if (p->width_specified && !p->flag_minus && !p->flag_zero)
 		ft_putnchar(' ', p->width - len);
 	handle_flags_ox('p', p, val);
 	handle_prec_u(val, p, '0', 16);
+	handle_zero_flag_u(val, p, 'p', 16);
 	if (!(p->precision_specified && !p->precision && !val))
 		ft_putnbr_long_base(val, 16, 'a');
 	else

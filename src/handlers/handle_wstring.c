@@ -38,7 +38,7 @@ void	ft_putnwstr(int *str, int to_output)
 		w_len = get_wchar_len(str[i]);
 		if (outputted + w_len > to_output)
 			return ;
-		ft_putchar(str[i]);
+		ft_putwchar(str[i]);
 		outputted += w_len;
 		i++;
 	}
