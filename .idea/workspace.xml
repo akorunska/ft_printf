@@ -12,8 +12,9 @@
     <list default="true" id="5d4ee680-e5b3-4853-8846-24ca0abb9044" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
-      <change beforePath="$PROJECT_DIR$/src/handlers/handle_hex.c" afterPath="$PROJECT_DIR$/src/handlers/handle_hex.c" />
+      <change beforePath="$PROJECT_DIR$/src/handlers/handle_string.c" afterPath="$PROJECT_DIR$/src/handlers/handle_string.c" />
       <change beforePath="$PROJECT_DIR$/src/handlers/handle_wstring.c" afterPath="$PROJECT_DIR$/src/handlers/handle_wstring.c" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/putwchar.c" afterPath="$PROJECT_DIR$/src/helpers/putwchar.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +34,7 @@
                 <entry file="file://$PROJECT_DIR$/main.c">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="345">
-                      <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+                      <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
                       <folding />
                     </state>
                   </provider>
@@ -96,8 +97,8 @@
               <file leaf-file-name="putwchar.c" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/helpers/putwchar.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="720">
-                      <caret line="48" column="27" lean-forward="false" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+                    <state relative-caret-position="195">
+                      <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="19" />
                       <folding />
                     </state>
                   </provider>
@@ -122,8 +123,8 @@
           <file leaf-file-name="handle_string.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/handlers/handle_string.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="735">
-                  <caret line="49" column="41" lean-forward="false" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+                <state relative-caret-position="495">
+                  <caret line="33" column="31" lean-forward="false" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
@@ -142,8 +143,8 @@
           <file leaf-file-name="handle_wstring.c" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/handlers/handle_wstring.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="536">
-                  <caret line="40" column="28" lean-forward="false" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+                <state relative-caret-position="506">
+                  <caret line="38" column="60" lean-forward="false" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
                   <folding />
                 </state>
               </provider>
@@ -179,13 +180,13 @@
         <option value="$PROJECT_DIR$/src/helpers/length_conv.c" />
         <option value="$PROJECT_DIR$/src/helpers/putnumbrs.c" />
         <option value="$PROJECT_DIR$/Makefile" />
-        <option value="$PROJECT_DIR$/src/handlers/handle_string.c" />
         <option value="$PROJECT_DIR$/include/ft_printf.h" />
         <option value="$PROJECT_DIR$/src/handlers/handle_char.c" />
         <option value="$PROJECT_DIR$/src/handlers/handle_hex.c" />
+        <option value="$PROJECT_DIR$/src/handlers/handle_string.c" />
         <option value="$PROJECT_DIR$/src/helpers/putwchar.c" />
-        <option value="$PROJECT_DIR$/src/handlers/handle_wstring.c" />
         <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/src/handlers/handle_wstring.c" />
       </list>
     </option>
   </component>
@@ -337,12 +338,12 @@
       <workItem from="1516603030618" duration="10823000" />
       <workItem from="1516628758332" duration="639000" />
       <workItem from="1516719572274" duration="7159000" />
-      <workItem from="1516787095937" duration="11322000" />
+      <workItem from="1516787095937" duration="13026000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30503000" />
+    <option name="totallyTimeSpent" value="32207000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -733,22 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/handlers/handle_string.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="41" lean-forward="false" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/handlers/handle_hex.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1106">
-          <caret line="82" column="51" lean-forward="false" selection-start-line="82" selection-start-column="51" selection-end-line="82" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/helpers/putnumbrs.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
@@ -773,18 +758,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/helpers/putwchar.c">
+    <entry file="file://$PROJECT_DIR$/src/handlers/handle_string.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="27" lean-forward="false" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/handlers/handle_wstring.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="40" column="28" lean-forward="false" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+        <state relative-caret-position="495">
+          <caret line="33" column="31" lean-forward="false" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -792,7 +769,31 @@
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handlers/handle_hex.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1106">
+          <caret line="82" column="51" lean-forward="false" selection-start-line="82" selection-start-column="51" selection-end-line="82" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helpers/putwchar.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handlers/handle_wstring.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="38" column="60" lean-forward="false" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
           <folding />
         </state>
       </provider>

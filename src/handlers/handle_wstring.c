@@ -11,9 +11,9 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h> //
+#include <stdlib.h>
 
-void	ft_putwstr(int *str)
+ void	ft_putwstr(int *str)
 {
 	int		i;
 
@@ -36,7 +36,7 @@ void	ft_putnwstr(int *str, int to_output)
 	while (i < to_output && str[i])
 	{
 		w_len = get_wchar_len(str[i]);
-		if (outputted + w_len > to_output)
+		if (outputted + w_len > to_output && MB_CUR_MAX == 4)
 			return ;
 		ft_putwchar(str[i]);
 		outputted += w_len;
@@ -53,7 +53,10 @@ int		ft_wstrlen(int *str)
 	len = 0;
 	while (str[i])
 	{
-		len += get_wchar_len(str[i]);
+		if (MB_CUR_MAX == 4)
+			len += get_wchar_len(str[i]);
+		else
+			len++;
 		i++;
 	}
 	return (len);

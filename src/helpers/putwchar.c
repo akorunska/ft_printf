@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h> //
+#include <stdlib.h>
 
 int		get_wchar_len(int c)
 {
@@ -47,8 +47,11 @@ void	ft_putwchar(int c)
 	int				len;
 
 	len = get_wchar_len(c);
-	if (len == 1)
+	if (len == 1 || MB_CUR_MAX == 1)
+	{
 		ft_putchar((unsigned char)c);
+		return ;
+	}
 	if (len == 2)
 	{
 		ft_putchar(((c & 1984) >> 6) | 192);

@@ -31,7 +31,7 @@ int		handle_string(va_list args, t_param *p)
 	char		*str;
 	int			len;
 
-	if (!ft_strcmp(p->len, "l") && MB_CUR_MAX == 4)
+	if (!ft_strcmp(p->len, "l"))
 		return (handle_wstring(args, p));
 	str = (char *)va_arg(args, void*);
 	if (!str)
