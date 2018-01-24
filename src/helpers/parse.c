@@ -23,13 +23,31 @@ void	parse_precision(const char *str, t_param *p, va_list args)
 		p->precision = ft_atoi(str + 1);
 }
 
+void	parse_width_backwards(const char *str, t_param *p, int i)
+{
+	int		num;
+
+	num = 0;
+	while (i >= 1)
+	{
+		num = ft_isdigit(str[i]);
+		if (num && !ft_isdigit(str[i - 1]) && str[i - 1] != '.')
+		{
+			p->width_specified = 1;
+			p->width = ft_atoi(str + i);
+			return ;
+		}
+		if (str[i] == '*' && str[i - 1] != '.')
+			return ;
+		i--;
+	}
+}
+
 void	parse_width(const char *str, t_param *p, va_list args)
 {
 	int		i;
-	int		num;
 
 	i = 1;
-	num = 0;
 	while (!is_type(str[i]) && str[i] != '\0')
 	{
 		if (str[i] == '*' && str[i - 1] != '.')
@@ -44,25 +62,13 @@ void	parse_width(const char *str, t_param *p, va_list args)
 		}
 		i++;
 	}
-	while (i >= 1)
-	{
-        num = ft_isdigit(str[i]);
-		if (num && !ft_isdigit(str[i - 1]) && str[i - 1] != '.')
-		{
-			p->width_specified = 1;
-			p->width = ft_atoi(str + i);
-			return ;
-		}
-		if (str[i] == '*' && str[i - 1] != '.')
-			return ;
-		i--;
-	}
+	parse_width_backwards(str, p, i);
 }
 
 void	parse_length(const char *str, t_param *p)
 {
 	int		i;
-	char 	*found;
+	char	*found;
 
 	i = 1;
 	found = 0;

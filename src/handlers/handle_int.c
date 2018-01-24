@@ -14,9 +14,9 @@
 
 void		handle_zero_flag_d(long long int val, t_param *p, char zero)
 {
-	int 		i;
+	int			i;
 	int			digits;
-	int 		outp;
+	int			outp;
 
 	i = 0;
 	if (!p->precision_specified)
@@ -39,9 +39,16 @@ void		handle_zero_flag_d(long long int val, t_param *p, char zero)
 	}
 }
 
+void		call_handlers(long long int val, t_param *p)
+{
+	handle_flags_d('d', p, val);
+	handle_prec(val, p, '0');
+	handle_zero_flag_d(val, p, '0');
+}
+
 int			handle_int(va_list args, t_param *p)
 {
-	long long int 	val;
+	long long int	val;
 	int				len;
 
 	val = convert_signed(args, p);
@@ -59,9 +66,7 @@ int			handle_int(va_list args, t_param *p)
 		len = 0;
 	if (p->width_specified && !p->flag_minus && !p->flag_zero)
 		ft_putnchar(' ', p->width - len);
-	handle_flags_d('d', p, val);
-	handle_prec(val, p, '0');
-	handle_zero_flag_d(val, p, '0');
+	call_handlers(val, p);
 	if (!(p->precision_specified && !p->precision && !val))
 		ft_putnbr_ll(val, p);
 	if (p->width_specified && p->flag_minus)

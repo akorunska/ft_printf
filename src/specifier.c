@@ -47,6 +47,13 @@ int		parse_error(const char *str, int pos, t_param *p, int *total)
 	return (pos + 1);
 }
 
+void	call_parsers(const char *str, t_param *opts, va_list args)
+{
+	parse_width(str, opts, args);
+	parse_flags(str, opts);
+	parse_length(str, opts);
+}
+
 int		handle_specifier(const char *str, va_list args, int *total)
 {
 	int		pos;
@@ -55,9 +62,7 @@ int		handle_specifier(const char *str, va_list args, int *total)
 
 	pos = 1;
 	initialise(&opts);
-	parse_width(str, &opts, args);
-	parse_flags(str, &opts);
-	parse_length(str, &opts);
+	call_parsers(str, &opts, args);
 	while (!is_type(str[pos]) && str[pos] != '\0')
 	{
 		if (str[pos] == '.')

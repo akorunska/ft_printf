@@ -13,7 +13,7 @@
 #include "ft_printf.h"
 #include <stdlib.h>
 
- void	ft_putwstr(int *str)
+void	ft_putwstr(int *str)
 {
 	int		i;
 
